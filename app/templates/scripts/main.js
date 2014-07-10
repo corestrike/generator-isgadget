@@ -1,5 +1,5 @@
-// This gadget main javascript
+'use strict';
 
-function init(){
+function initGadget(){
 	$('#header-title').text('Hello! Gadget!');
 }

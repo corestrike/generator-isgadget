@@ -3,7 +3,7 @@
 	<ModulePrefs title="__MSG_lb_gadget_title__" autoRefresh="true" scrolling="true" height="300">
 		<Locale messages="resources/ALL_ALL.xml" />
 		<Locale lang="ja" messages="resources/ja_ALL.xml"/>
-		<Icon>__IS_GADGET_BASE_URL__/images/gadgeticon-16.png</Icon>
+		<Icon>images/gadgeticon-16.ico</Icon>
 	</ModulePrefs>
 	<Content type="html"><![CDATA[
 	    <!-- build:css(.) styles/vendor.css -->
@@ -12,9 +12,8 @@
 	    <link rel="stylesheet" href="bower_components/font-awesome-bower/css/font-awesome.css" />
 	    <!-- endbower -->
 	    <!-- endbuild -->
-
 	    <!-- build:css(.tmp) styles/main.css -->
-		<link rel="stylesheet" href="__IS_GADGET_BASE_URL__/styles/main.css" />
+		<link rel="stylesheet" href="styles/main.css" />
 	    <!-- endbuild -->
 
 	    <!-- build:js(.) scripts/vendor.js -->
@@ -23,20 +22,19 @@
 	    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	    <!-- endbower -->
 	    <!-- endbuild -->
-
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-		<script src="__IS_GADGET_BASE_URL__/scripts/main.js"></script>
+		<script src="scripts/main.js"></script>
         <!-- endbuild -->
 
 		<!-- Here is HTML SourceCode -->
 		<div class="navbar navbar-default">
 	      <div class="navbar-header">
-	        <a id="header-title" class="navbar-brand" href="#"></a>
+	        <a id="header-title" class="navbar-brand title" href="#"></a>
 	      </div>
 	    </div>
 
 		<script type="text/javascript">
-			gadgets.util.registerOnLoadHandler(init);
+			gadgets.util.registerOnLoadHandler(initGadget);
 		</script>
 	]]></Content>
 </Module>

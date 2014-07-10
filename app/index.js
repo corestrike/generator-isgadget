@@ -45,6 +45,7 @@ var IsgadgetGenerator = yeoman.generators.Base.extend({
 
     this.template('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
+    this.template('_Gruntfile.js', 'Gruntfile.js');
 
     this.template('gadget.xml','app/'+this.gadgetName+'.xml');
     this.copy('scripts/main.js', 'app/scripts/main.js');
