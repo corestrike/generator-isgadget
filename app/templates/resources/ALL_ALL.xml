@@ -1,0 +1,3 @@
+<messagebundle>
+	<msg name="lb_gadget_title"><%= gadgetName %></msg>
+</messagebundle>
