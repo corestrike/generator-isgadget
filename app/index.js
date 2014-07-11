@@ -56,6 +56,12 @@ var IsgadgetGenerator = yeoman.generators.Base.extend({
   },
 
   projectfiles: function () {
+    this.mkdir('test');
+    this.mkdir('test/spec');
+
+    this.copy('test/karma.conf.js', 'test/karma.conf.js');
+    this.copy('test/spec/main.js', 'test/spec/main.js');
+
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
   }

@@ -230,24 +230,24 @@ module.exports = function (grunt) {
                 src: ['<%%= config.dist %>/<%= appname %>.xml'],
                 overwrite: true,
                 replacements: [{
-                    from: "src=\"scripts/",
-                    to: "src=\"__IS_GADGET_BASE_URL__/scripts/"
+                    from: 'src=\"scripts/',
+                    to: 'src=\"__IS_GADGET_BASE_URL__/scripts/'
                 }]
             },
             css: {
                 src: ['dist/sample.xml'],
                 overwrite: true,
                 replacements: [{
-                    from: "href=\"styles/",
-                    to: "href=\"__IS_GADGET_BASE_URL__/styles/"
+                    from: 'href=\"styles/',
+                    to: 'href=\"__IS_GADGET_BASE_URL__/styles/'
                 }]
             },
             img: {
                 src: ['dist/sample.xml'],
                 overwrite: true,
                 replacements: [{
-                    from: "images/gadgeticon-16.ico",
-                    to: "__IS_GADGET_BASE_URL__/images/gadgeticon-16.ico"
+                    from: 'images/gadgeticon-16.ico',
+                    to: '__IS_GADGET_BASE_URL__/images/gadgeticon-16.ico'
                 }]
 
             }
@@ -299,20 +299,19 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('upload', [
-        'build',
+        'default',
         'replace',
         'compress'
     ]);
 
     grunt.registerTask('dist', [
-        'build',
+        'default',
         'compress'
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
+        'newer:jshint:all',
         'test',
         'build',
-        'dist'
     ]);
 };
